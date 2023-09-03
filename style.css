@@ -12,6 +12,10 @@
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(./assets/MoonStars.svg);
+    --modal-color: rgba(255, 255, 255, 0.888);
+    --modal-text-color: black;
+    --fade-modal-button: rgba(56, 0, 51);
+    --fade-modal-text: white;
 }
 
 .light {
@@ -22,6 +26,10 @@
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./assets/Sun.svg);
+    --modal-color: rgba(0, 0, 0, 0.888);
+    --modal-text-color: white;
+    --fade-modal-button: rgb(255, 209, 251);
+    --fade-modal-text: black;
 }
 
 body {
@@ -184,3 +192,78 @@ footer {
     }
 }
 
+/*modal*/
+.buttn {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--fade-modal-button);
+    color: var(--fade-modal-text);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+.buttn:hover {
+    opacity: 1;
+}
+
+#fade,
+#mod {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#mod {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--modal-color);
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+h3 {
+    color: var(--modal-text-color);
+}
+
+.mod-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.mod-body p {
+    margin-bottom: 1rem;
+    color: var(--modal-text-color);
+}
+
+#mod.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mod.hide {
+    top: 0;
+}

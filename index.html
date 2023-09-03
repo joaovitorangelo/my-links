@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myLinks</title>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -41,7 +41,7 @@
             </li>
 
             <li>
-                <a href="#" id="open-modal" target="_blank">Sobre mim</a>
+                <a href="#" id="open-modal">Sobre mim</a>
             </li>
         </ul>
 
@@ -66,6 +66,19 @@
 
         </div>
 
+        <!--modal-->
+        <div id="fade" class="hide"></div>
+    <div id="mod" class="hide">
+        <div class="mod-header">
+            <h3>Olá, tudo bem?</h3>
+            <button class="buttn" id="close-mod">fechar</button>
+        </div>
+        <div class="mod-body">
+            <p>Me chamo João Vitor, tenho 18 anos de idade e atualmente faço Bacharelado em Engenharia de Software na Unicesumar.</p>
+            <p>Tenho foco no Front-end e este é um dos meus projetos onde explorei meus conhecimentos com HTML5, CSS e JS, cujo princípio é compartilhar links de redes sociais e outros.</p>
+        </div>
+    </div>
+
         <footer>
             <p>&copy; JoaoVitor</p>
             <!--
@@ -77,6 +90,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
+    <script defer src="./modal/script.js"></script>
 </body>
 
 </html>
